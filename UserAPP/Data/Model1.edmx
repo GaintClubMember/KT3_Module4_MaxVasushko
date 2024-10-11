@@ -49,8 +49,8 @@
           <Property Name="login" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="phone" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="passportSeries" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="passportNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="passportSeries" Type="nvarchar" MaxLength="100" />
+          <Property Name="passportNumber" Type="nvarchar" MaxLength="100" />
           <Property Name="birth" Type="date" Nullable="false" />
           <Property Name="lastAuth" Type="datetime" />
           <Property Name="authType_id" Type="int" />
@@ -163,8 +163,8 @@
           <Property Name="login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="passportSeries" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="passportNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="passportSeries" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="passportNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="birth" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="lastAuth" Type="DateTime" Precision="3" />
           <Property Name="authType_id" Type="Int32" />

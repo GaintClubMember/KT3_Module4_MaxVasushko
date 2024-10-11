@@ -10,12 +10,18 @@
 
     <Grid>
 
-        <ListView x:Name="listView" SelectionChanged="listView_SelectionChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <ListView x:Name="listView" SelectionChanged="listView_SelectionChanged" Grid.Row="0">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
@@ -59,11 +65,22 @@
                         </StackPanel>
 
                         <TextBlock Grid.Column="1" x:Name="roleBlock" Text="{Binding Roles.name}" VerticalAlignment="Center" Margin="20,0,0,0"></TextBlock>
+
+                        <Button Click="editBtn_Click" Margin="100,0,0,0" Width="70" Height="40" Content="Изменить" VerticalAlignment="Center" HorizontalAlignment="Right" x:Name="editBtn" Grid.Column="2" Grid.Row="0"></Button>
                     </Grid>
                     
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="backBtn" VerticalAlignment="Center" Height="40" HorizontalAlignment="Right" Width="180" Content="Назад" Click="backBtn_Click"></Button>
+            <Button Grid.Column="1" Click="addBtn_Click" x:Name="addBtn" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,15,0" Height="40" Width="180" Content="Добавить"></Button>
+        </Grid>
         
     </Grid>
 </Page>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UserAPP.Classes;
 
 namespace UserAPP.Pages
 {
@@ -35,7 +36,22 @@ namespace UserAPP.Pages
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
-            Classes.Manager.frameINIT.Navigate(new Pages.EditPage());
+            //Classes.Manager.frameINIT.Navigate(new Pages.EditPage());
+        }
+
+        private void editBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.Manager.frameINIT.Navigate(new Pages.EditPage((sender as Button).DataContext as Data.Users));
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.Manager.frameINIT.Navigate(new Pages.AddPage());
         }
     }
 }

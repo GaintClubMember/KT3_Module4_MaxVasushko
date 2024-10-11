@@ -15,11 +15,10 @@ namespace UserAPP.Data
     
     public partial class UsersDBEntities : DbContext
     {
-
         private static UsersDBEntities _context;
         public static UsersDBEntities GetContext()
         {
-            if( _context == null)
+            if (_context == null)
             {
                 _context = new UsersDBEntities();
             }
